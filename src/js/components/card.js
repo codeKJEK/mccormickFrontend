@@ -23,7 +23,7 @@ const cardContent = [
   },
   {
     image: threeLegRace2,
-    header: "Shared Items",
+    header: "The Menu",
     text: "We are asking you to bring Shared Dishes. Salads, veggies, desserts, etc. Each family should bring enough for 20.",
     // link: "#",
   },
