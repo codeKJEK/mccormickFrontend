@@ -54,7 +54,7 @@ const cardContent = [
   {
     image: kidsTalent3,
     header: "Kids Got Talent",
-    text: "We are hosting a kids talent show. Please sign you child up If they wish to participate.",
+    text: "We are hosting a kids talent show. Please sign your child up if they wish to participate.",
     // link: "#",
   },
 ];
