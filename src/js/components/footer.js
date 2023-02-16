@@ -46,10 +46,7 @@ function footerComponent(elementId) {
   const componentHtml = `
     <p class="message">This website is currently under construction. If you have any questions you need immediately resolved please fill out the form below.  Otherwise please check back at a later date.</p>
     <div class="formContainer">
-    <form name="contact" class="contactForm"
-  method="POST"
-  data-netlify-recaptcha="true"
-  data-netlify="true">
+    <form name="contact" class="contactForm" netlify data-netlify-recaptcha="true" data-netlify="true">
   <p>
     <label>Name <br><input type="text" name="name" /></label>
   </p>
