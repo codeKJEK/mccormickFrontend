@@ -29,7 +29,7 @@ const cardContent = [
   },
   {
     image: kidsTalent1,
-    header: "Seating Options",
+    header: "What To Bring",
     text: "We have a pavilion (with tables and benches) but if you want to sit in the sun, please bring a chair or ground cover. Totally optional!",
     // link: "#",
   },
@@ -54,7 +54,7 @@ const cardContent = [
   {
     image: kidsTalent3,
     header: "Kids Got Talent",
-    text: "We are hosting a kids talent show. If your child wishes to participate.",
+    text: "We are hosting a kids talent show. Please sign you child up If they wish to participate.",
     // link: "#",
   },
 ];
