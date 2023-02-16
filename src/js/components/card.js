@@ -36,13 +36,13 @@ const cardContent = [
   {
     image: kidsTalent2,
     header: "Ice & Drinks",
-    text: "We will have a few large ice chests but if you have one, bring it! BYOD – NO GLASS BOTTLES, Please",
+    text: "We will have a few large ice chests but bring a cooler if you have one. BYOD – NO GLASS BOTTLES, Please",
     // link: "#",
   },
   {
     image: bowling,
     header: "Bowling RSVP",
-    text: "Need a head count for all who are interested in going bowling Friday June 23, 2023. Please respond no later than 2/15/23.",
+    text: "Need a head count for all who are interested in going bowling Friday June 23, 2023. Please respond no later than 3/10/23.",
     // link: "#",
   },
   {
