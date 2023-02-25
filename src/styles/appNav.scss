@@ -1,0 +1,122 @@
+$headerHeight: 56px;
+
+.appHeader {
+    background: linear-gradient(#174D17, #003300);
+    height: $headerHeight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        font-weight: bold;
+        text-decoration: none;
+        color: white
+    }
+
+    .navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(#174D17, #003300);
+        padding-bottom: 2vh;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-width: 408px;
+        margin: 0 auto;
+    }
+
+    .menuItem {
+        min-height: $headerHeight;
+        min-width: $headerHeight;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        gap: 1px;
+
+        &:hover {
+            color: #FDE1E1;
+
+            svg {
+                fill: #FDE1E1;
+            }
+        }
+
+    }
+
+    .menuItem svg {
+        fill: white;
+        height: 24px;
+    }
+
+    .menuItem-text {
+        padding-top: 1px;
+        font-size: .833rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .appHeader {
+        .navigation {
+            padding-bottom: 1vh;
+        }
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    // .appHeader {
+    //     display: block;
+    //     .container {
+    //         max-width: 1280px;
+    //         margin: 0 auto;
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: space-between;
+    //         padding: 0 32px;
+    //     }
+    //     .navigation {
+    //         position: static;
+    //         width: inherit;
+    //         background: none;
+    //         margin-bottom: 0;
+    //         padding: 0;
+    //     }
+
+    //     .list {
+    //         gap: 16px;
+    //         align-items: center;
+    //         height: 50px;
+    //     }
+    //     .menuItem {
+    //         min-height: inherit;
+    //         min-width: inherit;
+    //         padding: 8px 16px;
+    //         display: block;
+    //     }
+
+    //     .menuItem svg {
+    //         display: none;
+    //     }
+
+    //     .menuItem-text {
+    //         font-size: 1rem;
+    //         display: block;
+    //     }
+    // }
+
+}
+

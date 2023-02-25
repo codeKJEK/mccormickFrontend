@@ -1,36 +1,13 @@
 $headerHeight: 56px;
-$h1FontSize: 2.488rem;
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Domine', serif;
     margin: 0;
     padding: 0;
-    
-    
-}
-
-h1 {
-    font-size: $h1FontSize;
-    line-height: calc($h1FontSize * 1.3);
-}
-h2 {font-size: 2.074rem;}
-h3 {font-size: 1.728rem;}
-h4 {font-size: 1.44rem;}
-h5 {font-size: 1.2rem;}
-h6 {
-    font-size: 1rem;
-    line-height: 1.6rem;
-}
-p { 
-    font-size: 1rem;
-    line-height: calc(1rem * 1.6);
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0 0 16px 0;
 }
 
 figure {
@@ -38,213 +15,41 @@ figure {
     padding: 0;
 }
 
-.appContainer {
-    background-color: #fff;
-    // background: url(../asset/background.svg);
-    // background-position: top center;
-    // background-size: 100vh;
-    // background-repeat: no-repeat;
-}
-
-.appHeader {
-    background: linear-gradient(#174D17, #003300);
-    height: $headerHeight;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .logo {
-        font-weight: bold;
-        text-decoration: none;
-        color: white
-    }
-    .navigation {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(#174D17, #003300);
-        padding-bottom: 2vh;
-    }
-    .list {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin: 0;
-        padding:0;
-        list-style: none;
-        max-width: 408px;
-        margin: 0 auto;
-    }
-    .menuItem {
-        min-height: $headerHeight;
-        min-width: $headerHeight;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        gap: 1px;
-        &:hover {
-                color: #FDE1E1;
-                svg {
-                    fill: #FDE1E1;
-                }
-            }
-        
-    }
-    .menuItem svg {
-        fill: white;
-        height: 24px;
-    }
-
-    .menuItem-text {
-        padding-top: 1px;
-        font-size: .833rem;
-    }
-
-    
-}
-
 .appContent {
-    margin-top: $headerHeight;
-    max-width: 1280px;
-    padding: 0 16px;
-    
-    .hero {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .heroContainer {
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
-    }
-
-    .heroImageContainer {
-        display: flex;
-        align-items: flex-end;
-    }
-    .heroImage {
-        width: 100%;
-        border-radius: 16px;
-        border: 1px solid #000;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    }
-
-    .heroLink {
-
-        padding: 16px 32px;
-        width: fit-content;
-        margin-top: 16px;
-        border-radius: 8px;
-
-        text-decoration: none;
-        border: 2px solid #000;
-            color: #000;
+    background-color: #fff;
+    .appContentContainer {
+        margin-top: 56px;
+        max-width: 1280px;
+        padding: 0 16px;
     }
 }
 
-@media screen and (min-width: 767px) {
 
-    .appContainer {
-            background-size: 100vw;
-        }
-    .appHeader {
-        .navigation {
-            padding-bottom: 1vh;
-        }
-    }
-    
-    .appContent{
-        .hero {
-            flex-direction: row;
-            align-items: center;
-            gap: 24px;
-        }
-        .heroContainer, .heroImageContainer {
-            width: 50%;
-        }
+@media screen and (min-width: 850px) {
 
-    }
-
-    .infoSection {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 32px;
-        .cardContainer {
-            width: calc(50% - 18px);
-        }
-    }
-}
-
-@media screen and (min-width: 1081px) {
     html {
         font-size: 18px;
     }
-        
-
-    
-    // .appHeader {
-    //     display: block;
-    //     .container {
-    //         max-width: 1280px;
-    //         margin: 0 auto;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-between;
-    //         padding: 0 32px;
-    //     }
-    //     .navigation {
-    //         position: static;
-    //         width: inherit;
-    //         background: none;
-    //         margin-bottom: 0;
-    //         padding: 0;
-    //     }
-
-    //     .list {
-    //         gap: 16px;
-    //         align-items: center;
-    //         height: 50px;
-    //     }
-    //     .menuItem {
-    //         min-height: inherit;
-    //         min-width: inherit;
-    //         padding: 8px 16px;
-    //         display: block;
-    //     }
-
-    //     .menuItem svg {
-    //         display: none;
-    //     }
-
-    //     .menuItem-text {
-    //         font-size: 1rem;
-    //         display: block;
-    //     }
-    // }
-    .appContent {
-        .heroContainer {
-            height: 75vh;
+    .appContent{
+        .appContentContainer {
+            padding: 0 32px;
         }
+
     }
 }
 
-@media screen and (min-width: 1280px) {
-
-    .foo
-    .appContainer {
-            background-position: center top -300px;
-        }
+@media screen and (min-width: 1080px){
     .appContent {
+        .appContentContainer {
+            max-width: 1016px;
+            margin: 56px auto 0 auto;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .appContentContainer {
         margin: 56px auto 0 auto;
         padding: 0 32px;
     }

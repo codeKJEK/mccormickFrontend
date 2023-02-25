@@ -1,0 +1,45 @@
+$h1FontSize: 2.488rem;
+$h2FontSize: 2.074rem;
+$h3FontSize: 1.728rem;
+$h4FontSize: 1.44rem;
+$h5FontSize: 1.2rem;
+$h6FontSize: 1rem;
+
+h1 {
+    font-size: $h1FontSize;
+    line-height: calc($h1FontSize * 1.3);
+}
+
+h2 {
+    font-size: $h2FontSize;
+        line-height: calc($h2FontSize * 1.3);
+}
+
+h3 {
+    font-size: $h3FontSize;
+        line-height: calc($h3FontSize * 1.3);
+}
+
+h4 {
+    font-size: $h4FontSize;
+        line-height: calc($h4FontSize * 1.3);
+}
+
+h5 {
+    font-size: $h5FontSize;
+        line-height: calc($h5FontSize * 1.3);
+}
+
+h6 {
+    font-size: $h6FontSize;
+        line-height: calc($h6FontSize * 1.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}

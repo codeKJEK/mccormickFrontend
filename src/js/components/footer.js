@@ -1,71 +1,19 @@
-// import "../../styles/footer.scss";
+import "../../styles/footer.scss";
+import headingThree from "../elements/headingThree.js";
+import paragraph from "../elements/paragraph.js";
+import link from "../elements/link.js";
 
-// const footerContent = [
-//   {
-//     text: "home",
-//     link: "#",
-//   },
-//   {
-//     text: "check",
-//     link: "#",
-//   },
-//   {
-//     text: "menu",
-//     link: "#",
-//   },
-//   {
-//     text: "star",
-//     link: "#",
-//   },
-//   {
-//     text: "contact",
-//     link: "#",
-//   },
-// ];
+function footer(parentId, heading, pText, destination, linkText) {
+  const componentHtml = `
+        <div class="container">
+            ${headingThree(heading)}
+            ${paragraph(pText)}
+            ${link(destination, linkText)}
+        </div>
+    `;
+  document
+    .getElementById(parentId)
+    .insertAdjacentHTML("beforeend", componentHtml);
+}
 
-// function generateLink() {
-//   let footerHtml = "";
-//   footerContent.forEach((footerElement) => {
-//     const newElement = `
-//     <li class="item">
-//     <a href="${footerElement.link}" class="link">${footerElement.text}</a>
-//     </li>
-//     `;
-//     footerHtml = footerHtml + newElement;
-//   });
-//   return footerHtml;
-// }
-
-// function footerComponent(elementId) {
-// const componentHtml = `
-//       <ul class="list">
-//           ${generateLink()}
-//       </ul>
-//       <p class="smallText text"><span>Company Name</span><span>Copyright&copy; 2023</span></p>
-//   `;
-//   const componentHtml = `
-//     <p class="message">This website is currently under construction. If you have any questions you need immediately resolved please fill out the form below.  Otherwise please check back at a later date.</p>
-//     <div class="formContainer">
-//     <form name="contact" class="contactForm" method="POST" data-netlify="true" onSubmit="submit">
-//   <p>
-//     <label>Name <br><input type="text" name="name" /></label>
-//   </p>
-//   <p>
-//     <label>Email <br><input type="email" name="email" /></label>
-//   </p>
-//   <p>
-//     <label>Comment: <br><input type="text" name="comment" class="commentBox" /> </label>
-//   </p>
-//   <p>
-//     <button type="submit">Send</button>
-//   </p>
-// </form>
-//     </div>
-
-//     <p class="smallText text"><span>McCormick Family Reunion</span><span>Copyright&copy; 2023</span></p>
-
-//   `;
-//   document.getElementById(elementId).innerHTML = componentHtml;
-// }
-
-// export default footerComponent;
+export default footer;

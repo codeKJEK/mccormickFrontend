@@ -13,49 +13,58 @@ const cardContent = [
     image: sackRace,
     header: "RSVP Online",
     text: "If you plan to join us on Saturday June 24th at Johnson Springview Park please let us know by submitting an RSVP online",
-    // link: "#",
-  },
-  {
-    image: bbqGrill,
-    header: "BYO-BBQ!",
-    text: "Bring your meat, chicken, fish etc. We will be grilling at Johnson Springview Park, Pavilion Number 3.",
-    // link: "#",
-  },
-  {
-    image: threeLegRace2,
-    header: "The Menu",
-    text: "We are asking you to bring Shared Dishes. Salads, veggies, desserts, etc. Each family should bring enough for 20.",
-    // link: "#",
-  },
-  {
-    image: kidsTalent1,
-    header: "What To Bring",
-    text: "We have a pavilion (with tables and benches) but if you want to sit in the sun, please bring a chair or ground cover. Totally optional!",
-    // link: "#",
-  },
-  {
-    image: kidsTalent2,
-    header: "Ice & Drinks",
-    text: "We will have a few large ice chests but bring a cooler if you have one. BYOD – NO GLASS BOTTLES, Please",
-    // link: "#",
+    link: "rsvp.html",
+    linkText: "RSVP Online Click Here",
   },
   {
     image: bowling,
     header: "Bowling RSVP",
     text: "Need a head count for all who are interested in going bowling Friday June 23, 2023. Please respond no later than 3/10/23.",
-    // link: "#",
+    link: "rsvp.html",
+    linkText: "RSVP Online Click Here",
   },
+  {
+    image: bbqGrill,
+    header: "BYO-BBQ!",
+    text: "Bring your meat, chicken, fish etc. We will be grilling at Johnson Springview Park, Pavilion Number 3.",
+    link: "menu.html",
+    linkText: "View Menu Click Here",
+  },
+  {
+    image: threeLegRace2,
+    header: "The Menu",
+    text: "We are asking you to bring Shared Dishes. Salads, veggies, desserts, etc. Each family should bring enough for 20.",
+    link: "menu.html",
+    linkText: "View Menu Click Here",
+  },
+  {
+    image: kidsTalent1,
+    header: "What To Bring",
+    text: "We have a pavilion (with tables and benches) but if you want to sit in the sun, please bring a chair or ground cover. Totally optional!",
+    link: "rsvp.html",
+    linkText: "RSVP Online Click Here",
+  },
+  {
+    image: kidsTalent2,
+    header: "Ice & Drinks",
+    text: "We will have a few large ice chests but bring a cooler if you have one. BYOD – NO GLASS BOTTLES, Please",
+    link: "rsvp.html",
+    linkText: "RSVP Online Click Here",
+  },
+
   {
     image: threeLegRace1,
     header: "Picnic Games",
     text: "Sack Races, 3-Legged Races, Tug-A-War, Balloon Toss, Orange Pass, Simon Says",
-    // link: "#",
+    link: "rsvp.html",
+    linkText: "RSVP Online Click Here",
   },
   {
     image: kidsTalent3,
     header: "Kids Got Talent",
     text: "We are hosting a kids talent show. Please sign your child up if they wish to participate.",
-    // link: "#",
+    link: "talent.html",
+    linkText: "Sign Up Click Here",
   },
 ];
 
@@ -67,6 +76,7 @@ function generateCard() {
                 <img src = ${card.image} class="cardImage" alt="${card.header}}"/>
                 <h2 class="cardHeader">${card.header}</h2>
                 <p class="cardText">${card.text}</p> 
+                <a href="${card.link}">${card.linkText}</a>
             </div>
         `;
     compiledHtml = compiledHtml + cardHtml;
@@ -75,8 +85,14 @@ function generateCard() {
 }
 
 function cardComponent(elementId) {
-  const cardComponent = generateCard();
-  document.getElementById(elementId).innerHTML = cardComponent;
+  const componentHtml = `
+    <section id="infoCard" class="card">
+      ${generateCard()}
+    </section>
+  `;
+  document
+    .getElementById(elementId)
+    .insertAdjacentHTML("beforeend", componentHtml);
 }
 
 export default cardComponent;

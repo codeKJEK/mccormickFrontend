@@ -1,0 +1,45 @@
+a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.brandLogo {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.linkIcon {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 56px;
+    min-height: 56px;
+    text-decoration: none;
+    font-size: .64rem;
+    gap: 2px;
+    svg {
+        height: 24px;
+        fill: #fff;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .linkIcon {
+        font-size: 1rem;
+        padding: 16px;
+        min-height: unset;
+        min-width: unset;
+        
+        svg {
+            display: none;
+        }
+    }
+}

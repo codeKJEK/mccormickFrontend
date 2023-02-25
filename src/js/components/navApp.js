@@ -1,3 +1,5 @@
+import "../../styles/appNav.scss";
+
 // const navContent = [
 //   {
 //     text: "home",

@@ -1,0 +1,61 @@
+.contactHeader {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        margin: 0;
+    }
+}
+
+.formContact {
+    max-width: 600px;
+        margin: 0 auto;
+    label {
+            display: block;
+            margin-bottom: 4px;
+        }
+    
+        fieldset {
+            padding: 32px;
+            border-radius: 16px;
+        }
+    
+        input {
+            height: 32px;
+            margin-bottom: 32px;
+        }
+    
+        input,
+        textarea {
+            width: 100%;
+        }
+
+        button {
+            margin: 16px 0 72px 0;
+            background: transparent;
+            background-color: #174D17;
+            padding: 16px 32px;
+            color: #fff;
+            font-size: inherit;
+            font-family: inherit;
+            border-radius: 8px;
+
+        }
+}
+
+.appFooter {
+    background-color: #174D17;
+    padding-bottom: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 16px 32px;
+    }
+}
+    
+   
+

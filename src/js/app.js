@@ -1,7 +1,6 @@
 import "../styles/app.scss";
 import "../styles/footer.scss";
-import navComponent from "./components/appNavigation.js";
-import heroComponent from "./components/hero.js";
+import navComponent from "./components/navApp.js";
+import appHeader from "./components/appHeader";
 
-navComponent("appHeader");
-heroComponent("hero");
+appHeader("appHeader");

@@ -1,0 +1,40 @@
+.hero {
+    div {
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    a {
+        border: 1px solid #174D17;;
+        padding: 16px 32px;
+        border-radius: 8px;
+        color: #174D17;
+        &:hover {
+                background-color: #174D17;
+                color: #fff;
+            }
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .hero {
+        display: flex;
+        align-items: center;
+        div {
+            height: 70vh;
+        }
+    }
+
+}
+
+

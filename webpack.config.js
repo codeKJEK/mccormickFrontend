@@ -2,11 +2,16 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
     app: path.resolve(__dirname, "src/js/app.js"),
     index: path.resolve(__dirname, "src/js/index.js"),
-    about: path.resolve(__dirname, "src/js/about.js"),
+    login: path.resolve(__dirname, "src/js/login.js"),
+    rsvp: path.resolve(__dirname, "src/js/rsvp.js"),
+    menu: path.resolve(__dirname, "src/js/menu.js"),
+    talent: path.resolve(__dirname, "src/js/talent.js"),
+    contact: path.resolve(__dirname, "src/js/contact.js"),
+    output: path.resolve(__dirname, "src/js/output.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -51,16 +56,45 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Home",
       filename: "index.html",
-      excludeChunks: ["about"],
+      chunks: ["app", "index"],
       inject: "body",
-      template: "src/html/index.html",
+      template: "src/html/template.html",
+    }),
+
+    new HtmlWebpackPlugin({
+      title: "RSVP",
+      filename: "rsvp.html",
+      chunks: ["app", "rsvp"],
+      inject: "body",
+      template: "src/html/template.html",
     }),
     new HtmlWebpackPlugin({
-      title: "About",
-      filename: "about.html",
-      excludeChunks: ["index"],
+      title: "Menu",
+      filename: "menu.html",
+      chunks: ["app", "menu"],
       inject: "body",
-      template: "src/html/about.html",
+      template: "src/html/template.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Talent",
+      filename: "talent.html",
+      chunks: ["app", "talent"],
+      inject: "body",
+      template: "src/html/template.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Contact",
+      filename: "contact.html",
+      chunks: ["app", "contact"],
+      inject: "body",
+      template: "src/html/contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "Output",
+      filename: "output.html",
+      chunks: ["app", "output"],
+      inject: "body",
+      template: "src/html/template.html",
     }),
   ],
 };

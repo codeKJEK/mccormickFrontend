@@ -1,4 +1,19 @@
 // cardContainer cardImage cardHeader cardText
+.card {
+    padding-top: 72px;
+    a {
+        border: 1px solid #174D17;
+        color: #174D17;
+        padding: 16px 32px;
+        margin: 16px 0 0 16px;
+        border-radius: 8px;
+        &:hover{
+            background-color: #174D17;
+            color: #fff;
+        }
+    }
+}
+
 
 .infoSection {
     padding: 56px 0;
@@ -21,7 +36,7 @@
 }
 
 .cardHeader {
-    background-color: #262626;
+    background-color: #174D17;
     color: #fff;
     padding: 8px 16px;
     margin-bottom:32px;
@@ -45,5 +60,16 @@
     &:hover {
         background-color: #D1EBD8;
         text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+    .cardContainer {
+        width: calc(50% - 32px);
     }
 }
