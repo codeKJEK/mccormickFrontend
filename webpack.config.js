@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     app: path.resolve(__dirname, "src/js/app.js"),
     index: path.resolve(__dirname, "src/js/index.js"),
@@ -92,7 +92,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Output",
       filename: "output.html",
-      chunks: ["app", "output"],
+      chunks: ["output"],
       inject: "body",
       template: "src/html/template.html",
     }),

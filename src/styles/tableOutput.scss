@@ -1,0 +1,36 @@
+.appContentContainer {
+    max-width: unset;
+}
+
+.appContent {
+    .num {
+        text-align: center;
+    }
+}
+
+tr:nth-child(even), th {
+    background-color: #f2f2f2;
+}
+
+
+td {
+    padding: 8px 0;
+}
+
+
+@media screen and (min-width: 1080px){
+    .appContent {
+        .appContentContainer {
+                max-width: unset;
+                margin-top: 56px;
+            }
+            th {
+                text-align: left;
+            }
+
+            .text {min-width: 200px;}
+            .num {min-width: 76px;}
+            .comment {padding-left: 32px;}
+    } 
+
+} 
